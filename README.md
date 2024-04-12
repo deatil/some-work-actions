@@ -1,4 +1,4 @@
-![rewriteReadme](https://github.com/seed-of-apricot/issue-list-readme/workflows/rewriteReadme/badge.svg)
+![rewriteReadme](https://github.com/deatil/some-work-actions/workflows/rewriteReadme/badge.svg)
 
 # Auto Issue List in README
 
@@ -12,8 +12,8 @@ The issue list below...
 
 <!-- issueTableDemo -->
 
-1. <a href="https://github.com/seed-of-apricot/issue-list-readme/issues/4">more test</a>
-2. <a href="https://github.com/seed-of-apricot/issue-list-readme/issues/2">test</a>
+1. <a href="https://github.com/deatil/some-work-actions/issues/4">more test</a>
+2. <a href="https://github.com/deatil/some-work-actions/issues/2">test</a>
 
 <!-- issueTableDemo -->
 
@@ -23,8 +23,8 @@ or `table` style:
 
 | Title                                                                                 |         Status          |                                                            Assignee                                                             | Body                                  |
 | :------------------------------------------------------------------------------------ | :---------------------: | :-----------------------------------------------------------------------------------------------------------------------------: | :------------------------------------ |
-| <a href="https://github.com/seed-of-apricot/issue-list-readme/issues/4">more test</a> | :eight_spoked_asterisk: |                                                                                                                                 | yay!                                  |
-| <a href="https://github.com/seed-of-apricot/issue-list-readme/issues/2">test</a>      | :eight_spoked_asterisk: | <a href="https://github.com/seed-of-apricot"><img src="https://avatars1.githubusercontent.com/u/26666870?v=4" width="20" /></a> | test<br />hoge<br />testtest<br />... |
+| <a href="https://github.com/deatil/some-work-actions/issues/4">more test</a> | :eight_spoked_asterisk: |                                                                                                                                 | yay!                                  |
+| <a href="https://github.com/deatil/some-work-actions/issues/2">test</a>      | :eight_spoked_asterisk: | <a href="https://github.com/seed-of-apricot"><img src="https://avatars1.githubusercontent.com/u/26666870?v=4" width="20" /></a> | test<br />hoge<br />testtest<br />... |
 
 <!-- issueTableDemo -->
 
@@ -36,7 +36,7 @@ steps:
   - name: checkout
     uses: actions/checkout@v2
   - name: rewriteReadme
-    uses: deatil/issue-list-readme@master
+    uses: deatil/some-work-actions@master
     with:
       GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
       pattern: '<!-- issueTable -->' # suffixing "Demo" for this readme
@@ -87,7 +87,7 @@ Some issue
 3. Then, write the following section into your action.
 
 ```yml
-uses: seed-of-apricot/issue-list-readme@v1.1.0
+uses: deatil/some-work-actions@v1.1.0
 with:
   GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 ```
