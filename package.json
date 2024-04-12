@@ -1,0 +1,77 @@
+{
+  "name": "typescript-action",
+  "version": "0.0.0",
+  "private": true,
+  "description": "TypeScript template action",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "webpack",
+    "tsc": "tsc",
+    "format": "prettier --write **/*.ts",
+    "format-check": "prettier --check **/*.ts",
+    "lint": "eslint src/**/*.ts",
+    "pack": "ncc build",
+    "dev": "ncc build -w",
+    "test": "jest",
+    "all": "npm run build && npm run format && npm run lint && npm run pack && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/actions/typescript-action.git"
+  },
+  "keywords": [
+    "actions",
+    "node",
+    "setup"
+  ],
+  "author": "YourNameOrOrganization",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@actions/github": "^2.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.8",
+    "@babel/plugin-transform-runtime": "^7.13.9",
+    "@babel/preset-env": "^7.13.9",
+    "@babel/preset-typescript": "^7.13.0",
+    "@octokit/action": "^2.0.3",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.7.12",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.8.0",
+    "@zeit/ncc": "^0.20.5",
+    "babel-loader": "^8.2.2",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-github": "^2.0.0",
+    "eslint-plugin-jest": "^22.21.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "graphql-tag": "^2.10.3",
+    "husky": "^4.2.3",
+    "jest": "^24.9.0",
+    "jest-circus": "^24.9.0",
+    "js-yaml": "^3.13.1",
+    "lint-staged": "^10.0.10",
+    "prettier": "^1.19.1",
+    "tablemark": "^2.0.0",
+    "ts-jest": "^24.2.0",
+    "typescript": "^3.6.4",
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": []
+    }
+  },
+  "lint-staged": {
+    "./**/*.{js,ts,jsx,tsx}": [
+      "eslint"
+    ],
+    "./**/*.{js,ts,jsx,tsx,json,md}": [
+      "git add"
+    ]
+  }
+}
