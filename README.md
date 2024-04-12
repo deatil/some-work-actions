@@ -36,7 +36,7 @@ steps:
   - name: checkout
     uses: actions/checkout@v2
   - name: rewriteReadme
-    uses: zhang0ZGC/issue-list-readme@master
+    uses: deatil/issue-list-readme@master
     with:
       GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
       pattern: '<!-- issueTable -->' # suffixing "Demo" for this readme
